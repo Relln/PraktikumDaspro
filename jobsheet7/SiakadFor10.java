@@ -7,7 +7,8 @@ public class SiakadFor10{
 public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);
 
-double nilai, tertinggi = 0, terendah = 100;
+double nilai, tertinggi = 0, terendah = 100, nilaiMinimum = 60;
+int lulus = 0, tLulus = 0;
 
 for (int i = 1; i <= 10; i++) {
     System.out.print("Masukan Nilai mahasiswa ke-" + i + ": ");
@@ -18,11 +19,17 @@ for (int i = 1; i <= 10; i++) {
     if ( nilai < terendah ) {
         terendah = nilai;
     }
+    if ( nilai >= nilaiMinimum) {
+        lulus++;
+    } else {
+        tLulus++;
+    }
 }
 
 System.out.println("Nilai Tertinggi :" + tertinggi);
 System.out.println("Nilai Terendah : " + terendah);
-
+System.out.println("Mahasiswa yang lulus ada : " + lulus);
+System.out.println("Mahasiswa yang lulus ada : " + tLulus);
 
     }
 }
