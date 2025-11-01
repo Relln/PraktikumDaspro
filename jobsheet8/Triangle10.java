@@ -17,6 +17,7 @@ while(i <= n) {
         System.out.print("*");
         j++;
     }
+    System.out.println();
     i++;
 }
 
