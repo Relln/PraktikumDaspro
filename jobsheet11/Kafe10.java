@@ -2,8 +2,16 @@ package jobsheet11;
 
 public class Kafe10 {
 
-    public static void Menu(String namaPelanggan, boolean isMember) {
+    public static void Menu(String namaPelanggan, boolean isMember, String kodePromo) {
         System.out.println("Selamat Datang " + namaPelanggan + "!");
+
+        if (kodePromo.equalsIgnoreCase("DISKON50")) {
+            System.out.println("Anda mendapatkan Diskon sebesar 50%");
+        } else if (kodePromo.equalsIgnoreCase("DISKON30")) {
+            System.out.println("Anda mendapatkan Diskon sebesar 30%");
+        } else {
+            System.out.println("Kode Invalid, Silahkan Ulangi!");
+        }
 
         if (isMember) {
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
@@ -20,6 +28,8 @@ public class Kafe10 {
         System.out.println("Silahkan pilih menu yang Anda inginkan");
     }
     public static void main(String[] args) {
-    Menu("Andi", true);
+    Menu("Budi", true, "DISKON30");
+
+    
     }
 }
